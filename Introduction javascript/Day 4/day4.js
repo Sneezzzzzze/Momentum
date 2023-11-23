@@ -11,10 +11,9 @@
 // console.log(typeof parseInt(age));
 
 // Age calculator
-const aGe = isNaN(parseInt(prompt("How old are you?")));
-console.log(aGe);
+const aGe = parseInt(prompt("How old are you?"));
 
-if (aGe || aGe < 0) {
+if (isNaN(aGe) || aGe < 0) {
     /// condition === true
     console.log("Please write a real positive number");
 } else if(aGe < 18) {
@@ -23,7 +22,9 @@ if (aGe || aGe < 0) {
     console.log("You can drink");
 } else if (aGe > 50 && aGe <= 80) {
     console.log("You should exercise");
-} else if (aGe > 80) {
+} else if (aGe === 100) { // === equal value and equal type, !== not equal value and not equal type
+    console.log("Wow you are wise");
+} else if (aGe > 80) { 
     console.log("You can do whatever you want");
 } else {
     /// codition === false
