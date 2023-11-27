@@ -12,3 +12,8 @@ console.log(titlee);
 
 const titlees = document.querySelectorAll(".hello h1"); // grab all (array)
 console.log(titlees);
+
+// Change the style of the color h1
+const titles = document.querySelector("div.hello:first-child h1");
+console.dir(titles);
+titles.style.color = "blue";
