@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Momentum App</title>
-  </head>
-  <body>
-    <h2 id="clock">00:00:00</h2>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
+</head>
+<body class="bg-scroll" style="
+    background-image: url(/img/pexels-pixabay-50594.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  ">
+<div id="weather"
+     class="absolute top-4 right-4 flex flex-row items-center space-x-2 bg-gray-400 rounded text-white p-2 shadow-md">
+    <span class="ml-2"></span>
+    <span class="mr-8"></span>
+</div>
 
-    <h1 id="greeting" class="hidden"></h1>
+<div class="w-screen h-screen flex flex-col justify-between items-center">
+  <div class="w-screen h-screen flex items-center justify-center">
+    <div class="flex flex-col items-center space-y-4">
+      <h2 id="clock" class="text-white text-center text-5xl font-bold shadow-md">00:00:00</h2>
 
-    <form id="todo-form">
-      <input type="text" placeholder="Write a ToDo and Press Enter." />
-    </form>
+      <form id="login-form" class="hidden">
+        <input
+                required
+                maxlength="15"
+                type="text"
+                placeholder="What is your name?"
+                class="rounded p-2"
+        />
+        <input type="submit" value="Log In" class="ml-2 p-2 rounded bg-blue-500 text-white"/>
+      </form>
 
-    <ul id="todo-list"></ul>
+      <h1 id="greeting" class="hidden text-center mb-2 text-white shadow-md"></h1>
 
-    <div id="quote">
-      <span></span>
-      <span></span>
+      <form id="todo-form">
+        <input class="rounded p-2 text-black placeholder:text-sm" type="text" placeholder="Write a ToDo and Press Enter." />
+      </form>
+
+      <ul id="todo-list" class="text-white mb-2"></ul>
     </div>
+  </div>
 
-    <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
-  </body>
+
+    <div id="quote" class="mb-4 text-center text-white">
+        <span>Quote Part 1</span>
+        <span>Quote Part 2</span>
+    </div>
+</div>
+
+<script src="js/greeting.js"></script>
+<script src="js/clock.js"></script>
+<script src="js/quotes.js"></script>
+<script src="js/todo.js"></script>
+<script src="js/secrete.js"></script>
+<script src="js/weather.js"></script>
+</body>
 </html>
